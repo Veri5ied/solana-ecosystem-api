@@ -1,0 +1,19 @@
+{
+  "name": "solana-ecosystem-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Veri5ied/solana-ecosystem-api.git",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel index.js -d dist",
+    "start": "npm run build && nodemon dist/index.js"
+  },
+  "author": "Veri5ied",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "nodemon": "^2.0.15"
+  }
+}
