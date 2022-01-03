@@ -2,6 +2,7 @@ import express, { json, urlencoded } from "express";
 import cors from "cors";
 import morgan from "morgan";
 import dotenv from "dotenv";
+import tokenRouter from "./resources/tokens/token.router";
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ app.use(morgan("dev"));
 app.use((req, res) => {
   res.send("Hello from the server");
 });
+
+app.use("/api/tokens", tokenRouter);
 
 const start = () => {
   try {
